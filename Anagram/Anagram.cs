@@ -7,27 +7,27 @@ namespace Anagram
     {
         public bool WordPairIsAnagram(string word1, string word2) 
         {
+            int LengthOfWord1 = word1.Count; 
+            int LengthOfWord2 = word2.Count;
+            
+            if (LengthOfWord1 != LengthOfWord2) 
+            { 
+                Console.WriteLine("The two words {0} and {1} are Anagrams", word1, word2);
+                return false; 
+            }
+            
             char[] ArrayOfWord1 = word1.ToLower().ToCharArray();
             char[] ArrayOfWord2 = word2.ToLower().ToCharArray();
             
             Array.Sort(ArrayOfWord1);
-            Array.Sort(ArrayOfWord2);
+            Array.Sort(ArrayOfWord2);          
             
-            int LengthOfWord1 = word1.Count; 
-            int LengthOfWord2 = word2.Count; 
-  
-            if (LengthOfWord1 != LengthOfWord2) 
-            { 
-                Console.WriteLine("words {0} and {1} are Anagrams", word1, word2);
-                return false; 
-            }
+            string new_SortedWord1 = new string(char_SortedWord1);
+            string new_SortedWord2 = new string(char_SortedWord2);
             
-            string new_word1 = new string(char_word1);
-            string new_word2 = new string(char_word2);
-            
-            if(new_word1 == new_word2)
+            if(new_SortedWord1 == new_SortedWord2)
             {
-                Console.WriteLine("words {0} and {1} are Anagrams", word1, word2);
+                Console.WriteLine("The two words {0} and {1} are Anagrams", word1, word2);
                 return true;
             }
             else

@@ -22,8 +22,8 @@ namespace Anagram
             Array.Sort(ArrayOfWord1);
             Array.Sort(ArrayOfWord2);          
             
-            string new_SortedWord1 = new string(char_SortedWord1);
-            string new_SortedWord2 = new string(char_SortedWord2);
+            string new_SortedWord1 = new string(char_word1);
+            string new_SortedWord2 = new string(char_word2);
             
             if(new_SortedWord1 == new_SortedWord2)
             {
@@ -44,7 +44,7 @@ namespace Anagram
             {
                 if (WordPairIsAnagram(word , candidates[iterator]) == false)
                 {
-                    candidates.RemoveAt(index);
+                    candidates.RemoveAt(iterator);
                     iterator--;
                 }
             }

@@ -7,8 +7,8 @@ namespace Anagram
     {
         public bool WordPairIsAnagram(string word1, string word2) 
         {
-            int LengthOfWord1 = word1.Count; 
-            int LengthOfWord2 = word2.Count;
+            int LengthOfWord1 = word1.Length; 
+            int LengthOfWord2 = word2.Length;
             
             if (LengthOfWord1 != LengthOfWord2) 
             { 
